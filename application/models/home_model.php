@@ -17,5 +17,15 @@ class Home_model extends CI_Model{
         $query = $this->db->query($sql);
         return $query->result_array();
     }
+    public function getCategoriasTorneo($idTorneo){
+        $sql = "SELECT 
+            t_c.id_categoria AS ID_CATEGORIA
+            ,t_c.nombre AS NOMBRE_CATEGORIA
+            ,t_c.descripcion AS DESCRIPCION_CATEGORIA
+        FROM t_categoria t_c 
+        WHERE t_c.id_torneo = $idTorneo";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 }
 ?>

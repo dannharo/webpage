@@ -8,24 +8,35 @@
             <li class="current"><a href="#">Inicio</a></li>
             <li>
                 <a href="#">Resultados</a>
-                <ul>
-                    <li><a href="#">1ra</a></li>
-                    <li><a href="#">2da</a></li>
-                    <li><a href="#">Femanil</a></li>
-                </ul>
+                <?php if(sizeof($categorias) > 1){
+                echo '<ul>';
+                foreach ($categorias AS $cat){
+                        echo "<li><a href=''>".$cat['NOMBRE_CATEGORIA']."</a></li>";
+                    }
+                echo '</ul>';
+                }
+                ?>
             </li>
             <li><a href="">Equipos</a>
-                <ul>
-                    <li><a href="#">1ra</a></li>
-                    <li><a href="#">2da</a></li>
-                    <li><a href="#">Femanil</a></li>
-                </ul></li>
+                <?php if(sizeof($categorias) > 1){
+                    echo '<ul>';
+                    foreach ($categorias AS $cat){
+                        echo "<li><a href=''>".$cat['NOMBRE_CATEGORIA']."</a></li>";
+                    }
+                    echo '</ul>';
+                }
+                ?>
+            </li>
             <li><a href="">Estadísticas</a>
-                <ul>
-                    <li><a href="#">1ra</a></li>
-                    <li><a href="#">2da</a></li>
-                    <li><a href="#">Femanil</a></li>
-                </ul></li>
+                <?php if(sizeof($categorias) > 1){
+                    echo '<ul>';
+                    foreach ($categorias AS $cat){
+                        echo "<li><a href=''>".$cat['NOMBRE_CATEGORIA']."</a></li>";
+                    }
+                    echo '</ul>';
+                }
+                ?>
+            </li>
             <li><a href="">Galería</a></li>
             <li><a href="">Noticias</a></li>
             <li><a href="">Historia</a></li>

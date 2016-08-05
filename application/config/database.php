@@ -77,6 +77,7 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => '127.0.0.1',
 	'username' => 'root',
+	'port' => '3366',
 	'password' => 'root',
 	'database' => 'webdb',
 	'dbdriver' => 'mysqli',
