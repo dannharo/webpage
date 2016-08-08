@@ -9,6 +9,8 @@
     <!--[if lte IE 9]><link rel="stylesheet" href="<?php echo base_url().'Content/Vendor/css/ie9.css';?>" /><![endif]-->
     <!-- Scripts -->
     <script src="<?php echo base_url().'Content/Vendor/js/jquery.min.js';?>"></script>
+    <script src="<?php echo base_url(),'Content/Vendor/Js/datatables-jquery/jquery.dataTables.min.js'?>"></script>
+    <link rel="stylesheet" href="<?php echo base_url(),'Content/Vendor/Js/datatables-jquery/jquery.dataTables.css'?>">
     <script src="<?php echo base_url().'Content/Vendor/js/jquery.dropotron.min.js';?>"></script>
     <script src="<?php echo base_url().'Content/Vendor/js/skel.min.js';?>"></script>
     <script src="<?php echo base_url().'Content/Vendor/js/util.js';?>"></script>
