@@ -1,12 +1,11 @@
 <div id="header">
     <!-- Logo -->
-    <h1><a href="<?php echo base_url()?>" id="logo"><?php echo $datosTorneo[0]['NOMBRE_LIGA']?></a></h1>
+    <h1><a href="<?php echo base_url()?>" id="logo"><?php echo $datosTorneo[0]['NOMBRE_LIGA']?> -- <i>Administración</i> -- </a></h1>
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li id="inicio"><a href="<?php echo base_url()?>">Inicio</a></li>
-            <li id="resultados">
-                <a href="#">Resultados</a>
+            <li id="partidos">
+                <a href="#">Partidos</a>
                 <?php if(sizeof($categorias) > 1){
                 echo '<ul>';
                 foreach ($categorias AS $cat){

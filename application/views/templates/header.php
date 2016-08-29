@@ -1,7 +1,6 @@
 <div id="header">
     <!-- Logo -->
     <h1><a href="<?php echo base_url()?>" id="logo"><?php echo $datosTorneo[0]['NOMBRE_LIGA']?></a></h1>
-
     <!-- Nav -->
     <nav id="nav">
         <ul>

@@ -9,7 +9,7 @@
     <div class="copyright">
         <ul class="menu">
             <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            <li><a title="Administración" href="<?php echo base_url().'index.php/login/index';?>"><div id="login"></div></a></li>
+            <li><a title="Administración" href="<?php echo base_url().'index.php/administracion/index';?>"><div id="login"></div></a></li>
         </ul>
 
     </div>

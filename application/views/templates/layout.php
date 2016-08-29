@@ -5,6 +5,7 @@
     <title><?php echo $title?></title>
     <!--[if lte IE 8]><script src="<?php echo base_url().'Content/Vendor/js/ie/html5shiv.js';?>"></script><![endif]-->
     <link rel="stylesheet" href="<?php echo base_url().'Content/Vendor/css/main.css';?>" />
+    <link rel="stylesheet" href="<?php echo base_url().'Content/Assets/css/webpage.css';?>" />
     <!--[if lte IE 8]><link rel="stylesheet" href="<?php echo base_url().'Content/Vendor/css/ie8.css';?>" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="<?php echo base_url().'Content/Vendor/css/ie9.css';?>" /><![endif]-->
     <!-- Scripts -->
