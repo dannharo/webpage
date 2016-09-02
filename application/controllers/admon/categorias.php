@@ -13,7 +13,11 @@ class Categorias extends CI_Controller
         $this->data['categorias'] = $this->home_model->getCategoriasTorneo($this->data['datosTorneo'][0]['ID_TORNEO']);
     }
     public function index(){
-        $this->data['vista'] = $this->load->view('admin/categorias/categorias_main','',TRUE);
+        $crud = new Grocery_CRUD();
+        $crud->set_table('t_categoria');
+        $crud->set_relation('id_torneo','t_torneo','nombre');
+        $output = $crud->render();
+        $this->data['vista'] = $this->load->view('admin/categorias/categorias_main',$output,TRUE);
         $this->load->view('admin/layout',$this->data);
     }
 }

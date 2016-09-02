@@ -27,9 +27,6 @@
     <!-- Header -->
     <?php include ('header.php'); ?>
     <?php echo $vista;
-    if(!empty($output)){
-        echo $output->output;
-    }
     ?>
     <!-- Footer -->
     <?php include ('footer.php'); ?>

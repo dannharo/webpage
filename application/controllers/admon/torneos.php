@@ -13,7 +13,12 @@ class Torneos extends CI_Controller
         $this->data['categorias'] = $this->home_model->getCategoriasTorneo($this->data['datosTorneo'][0]['ID_TORNEO']);
     }
     public function index(){
-        $this->data['vista'] = $this->load->view('admin/torneo/torneo_main','',TRUE);
+        $crud = new Grocery_CRUD();
+        $crud->set_table('t_torneo');
+        $crud->where('id_liga',$this->data['datosTorneo'][0]['ID_TORNEO']);
+        $crud->unset_delete();
+        $output = $crud->render();
+        $this->data['vista'] = $this->load->view('admin/torneo/torneo_main',$output,TRUE);
         $this->load->view('admin/layout',$this->data);
     }
 }
