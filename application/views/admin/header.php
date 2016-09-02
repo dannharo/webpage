@@ -4,40 +4,24 @@
     <!-- Nav -->
     <nav id="nav">
         <ul>
-            <li id="partidos">
-                <a href="#">Partidos</a>
-                <?php if(sizeof($categorias) > 1){
-                echo '<ul>';
-                foreach ($categorias AS $cat){
-                        echo "<li><a href=''>".$cat['NOMBRE_CATEGORIA']."</a></li>";
-                    }
-                echo '</ul>';
-                }
-                ?>
+            <li id="partidos"><a href="<?php echo base_url().'index.php/admon/partidos/index';?>">Partidos</a></li>
+            <li id="equipos"><a href="<?php echo base_url().'index.php/admon/equipos/index';?>">Equipos</a></li>
+            <li id="jugadores"><a href="<?php echo base_url().'index.php/admon/jugadores/index'?>">Jugadores</a></li>
+            <li id="admon-tor"><a href="<?php echo base_url().'index.php/admon/administracion/index';?>">Admon. de Torneos</a>
+                <ul>
+                    <li><a href='<?php echo base_url().'index.php/admon/torneos/index';?>'>Torneo</a></li>
+                    <li><a href='<?php echo base_url().'index.php/admon/categorias/index';?>'>Categotía</a></li>
+                </ul>
             </li>
-            <li id="equipo"><a href="<?php echo base_url().'index.php/equipo/index'?>">Equipos</a>
-                <?php if(sizeof($categorias) > 1){
-                    echo '<ul>';
-                    foreach ($categorias AS $cat){
-                        echo "<li><a href=''>".$cat['NOMBRE_CATEGORIA']."</a></li>";
-                    }
-                    echo '</ul>';
-                }
-                ?>
+            <li id="galerias"><a href="<?php echo base_url().'index.php/admon/galerias/index';?>">Galerías</a></li>
+            <li id="noticias"><a href="<?php echo base_url().'index.php/admon/noticias/index';?>">Noticias</a></li>
+            <li id="otros"><a href="<?php echo base_url().'index.php/admon/administracion/index';?>">Otros</a>
+                <ul>
+                    <li><a href='<?php echo base_url().'index.php/admon/lugares/index';?>'>Lugares</a></li>
+                    <li><a href='<?php echo base_url().'index.php/admon/arbitros/index';?>'>Árbitros</a></li>
+                    <li><a href='<?php echo base_url().'index.php/admon/usuarios/index';?>'>Usuarios</a></li>
+                </ul>
             </li>
-            <li id="estadisticas"><a href="">Estadísticas</a>
-                <?php if(sizeof($categorias) > 1){
-                    echo '<ul>';
-                    foreach ($categorias AS $cat){
-                        echo "<li><a href=''>".$cat['NOMBRE_CATEGORIA']."</a></li>";
-                    }
-                    echo '</ul>';
-                }
-                ?>
-            </li>
-            <li id="galeria"><a href="">Galería</a></li>
-            <li id="noticias"><a href="">Noticias</a></li>
-            <li id="historia"><a href="">Historia</a></li>
         </ul>
     </nav>
 
