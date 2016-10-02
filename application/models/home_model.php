@@ -12,7 +12,7 @@ class Home_model extends CI_Model{
                   ,t_t.nombre AS NOMBRE_TORNEO
                   ,t_t.fecha_inicio AS FECHA_INICIO
                 from T_LIGA t_l
-                INNER JOIN T_TORNEO	t_t ON t_t.id_liga = t_l.id_liga AND t_t.activo = 1
+                INNER JOIN T_TORNEO	t_t ON t_t.id_liga = t_l.id_liga AND t_t.status = 1
                 Where t_l.id_liga = $idLiga";
         $query = $this->db->query($sql);
         return $query->result_array();

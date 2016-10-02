@@ -1805,7 +1805,7 @@
 			animation: none !important;
 		}
 
-	body, input, select, textarea {
+	body, select, textarea {
 		color: #474747;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
@@ -1936,9 +1936,7 @@
 
 /* Form */
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
+
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -1959,18 +1957,12 @@
 		width: 100%;
 	}
 
-		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
 		textarea:focus {
 			border-color: #37c0fb;
 		}
 
-	input[type="text"],
-	input[type="password"],
-	input[type="email"] {
-		line-height: 1em;
-	}
+
+
 
 	label {
 		display: block;

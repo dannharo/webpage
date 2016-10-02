@@ -14,8 +14,11 @@ class Categorias extends CI_Controller
     }
     public function index(){
         $crud = new Grocery_CRUD();
+        $crud->set_theme('datatables');
         $crud->set_table('t_categoria');
-        $crud->set_relation('id_torneo','t_torneo','nombre');
+        $crud->set_relation('id_torneo','t_torneo','nombre',array('id_liga'=>ID_TORNEO));
+        $crud->set_relation('campeon','t_equipo','nombre',array('id_categoria'=>'t_categoria.id_categoria'));
+        $crud->where('id_liga',ID_TORNEO);
         $output = $crud->render();
         $this->data['vista'] = $this->load->view('admin/categorias/categorias_main',$output,TRUE);
         $this->load->view('admin/layout',$this->data);

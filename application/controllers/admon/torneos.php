@@ -14,7 +14,15 @@ class Torneos extends CI_Controller
     }
     public function index(){
         $crud = new Grocery_CRUD();
+        $crud->set_theme('datatables');
         $crud->set_table('t_torneo');
+        $crud->columns('nombre','fecha_inicio','fecha_termino','status');
+        $crud->add_fields('id_liga','nombre','fecha_inicio','fecha_termino','status');
+        $crud->edit_fields('nombre','fecha_inicio','fecha_termino','status');
+        $crud->display_as('status','Estatus del torneo');
+        $crud->set_relation('status','cat_status_torneo','nombre');
+        $crud->required_fields('nombre','activo');
+        $crud->field_type('id_liga','hidden',ID_TORNEO);
         $crud->where('id_liga',$this->data['datosTorneo'][0]['ID_TORNEO']);
         $crud->unset_delete();
         $output = $crud->render();
